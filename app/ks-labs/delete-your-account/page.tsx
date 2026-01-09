@@ -39,19 +39,6 @@ export default function DeleteYourAccountPage() {
                   </li>
                 ))}
               </ol>
-              <div className="mt-4 rounded-lg border-l-4 border-amber-500 bg-amber-500/10 p-4">
-                <p className="text-amber-300">
-                  Alternatively, you can email us at{" "}
-                  <a
-                    href="mailto:krishna.dhas021815@gmail.com"
-                    className="font-medium underline transition duration-150 hover:text-amber-200"
-                  >
-                    krishna.dhas021815@gmail.com
-                  </a>{" "}
-                  with the subject line &quot;Delete My Account&quot; from your
-                  registered email address.
-                </p>
-              </div>
             </div>
           </section>
 
