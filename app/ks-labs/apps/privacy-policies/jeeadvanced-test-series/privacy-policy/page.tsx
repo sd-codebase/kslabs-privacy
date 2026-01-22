@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JeeAdvanced Test Series by KS Labs - Privacy Policy",
+  title: "JEE Adv. Test Series by KSLabs - Privacy Policy",
 };
 
 export default function PrivacyPolicyPage() {
@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
         <header className="mb-10 border-b border-gray-800 pb-8">
           <h1 className="text-4xl font-bold text-white">
             Privacy Policy for{" "}
-            <span className="text-indigo-400">JeeAdvanced Test Series by KS Labs</span>
+            <span className="text-indigo-400">JEE Adv. Test Series by KSLabs</span>
           </h1>
           <p className="mt-3 text-sm text-gray-400">
             Effective Date:{" "}
@@ -60,7 +60,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <div className="pl-11">
               <p>
-                MongoDB provides database storage functionality for the JeeAdvanced
+                MongoDB provides database storage functionality for the JEE Adv.
                 Test Series app. Your personal information (name and email) is
                 securely stored in our MongoDB database. We encourage you to
                 review MongoDB&apos;s privacy policy independently to understand
@@ -174,7 +174,7 @@ export default function PrivacyPolicyPage() {
             </h2>
             <div className="pl-11">
               <p>
-                KS Labs maintains reasonable protective measures for data
+                KSLabs maintains reasonable protective measures for data
                 security, including encryption and secure data transmission.
                 However, we cannot guarantee absolute protection against
                 third-party breaches beyond our control.
@@ -205,7 +205,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <footer className="mt-12 border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; KS Labs — JeeAdvanced Test Series</p>
+          <p>&copy; KSLabs — JEE Adv. Test Series</p>
           <p className="mt-1">Effective Date: January 22, 2026</p>
         </footer>
       </div>
