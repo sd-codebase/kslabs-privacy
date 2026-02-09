@@ -44,10 +44,36 @@ export default function PrivacyPolicyPage() {
                 </ul>
               </div>
               <p>
-                The app may also gather non-personal information including device
-                specifications, usage analytics, crash diagnostics, and
-                aggregated metrics through third-party services.
+                The app may also gather non-personal information through
+                third-party services, including:
               </p>
+              <div className="mt-3 rounded-lg border-l-4 border-blue-500 bg-blue-500/10 p-4">
+                <p className="text-blue-300">
+                  Data collected automatically via third-party SDKs:
+                </p>
+                <ul className="mt-2 space-y-1">
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 text-blue-400">•</span>
+                    <span>Device identifiers (e.g., Advertising ID / IDFA)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 text-blue-400">•</span>
+                    <span>Ad interaction and impression data (via Google AdMob)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 text-blue-400">•</span>
+                    <span>App usage events, session data, and screen views (via Firebase Analytics)</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 text-blue-400">•</span>
+                    <span>Device specifications, OS version, and app version</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 text-blue-400">•</span>
+                    <span>Crash diagnostics and performance metrics</span>
+                  </li>
+                </ul>
+              </div>
             </div>
           </section>
 
@@ -58,39 +84,82 @@ export default function PrivacyPolicyPage() {
               </span>
               Third-Party Services
             </h2>
-            <div className="pl-11">
-              <p>
-                MongoDB provides database storage functionality for the JeeMains
-                Test Series app. Your personal information (name and email) is
-                securely stored in our MongoDB database. We encourage you to
-                review MongoDB&apos;s privacy policy independently to understand
-                how they handle data.
+            <div className="space-y-6 pl-11">
+              <div>
+                <h3 className="mb-2 text-lg font-medium text-white">Google AdMob</h3>
+                <p>
+                  We use Google AdMob to serve advertisements within the app.
+                  AdMob may collect and use device identifiers (such as the
+                  Advertising ID / IDFA), ad interaction data, and device
+                  information to serve personalized or non-personalized ads.
+                  This data is processed by Google in accordance with their
+                  privacy policy.
+                </p>
+              </div>
+              <div>
+                <h3 className="mb-2 text-lg font-medium text-white">Firebase Analytics</h3>
+                <p>
+                  We use Firebase Analytics to understand how users interact
+                  with the app. Firebase Analytics collects usage and event
+                  data, device information, app interactions, and session
+                  data. This helps us improve app performance and user
+                  experience. Data is processed by Google.
+                </p>
+              </div>
+              <div>
+                <h3 className="mb-2 text-lg font-medium text-white">MongoDB</h3>
+                <p>
+                  MongoDB provides database storage functionality for the
+                  JeeMains Test Series app. Your personal information (name
+                  and email) is securely stored in our MongoDB database.
+                </p>
+              </div>
+              <p className="text-sm text-gray-400">
+                We encourage you to review these third-party providers&apos;
+                privacy policies independently to understand how they handle
+                data.
               </p>
-              <div className="mt-4 rounded-lg bg-gray-800 p-4">
-                <p className="mb-2 text-sm font-medium text-gray-400">
+              <div className="mt-4 space-y-2 rounded-lg bg-gray-800 p-4">
+                <p className="mb-3 text-sm font-medium text-gray-400">
                   Third-party providers:
                 </p>
-                <a
-                  href="https://www.mongodb.com/legal/privacy-policy"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center gap-1 text-indigo-400 transition duration-150 hover:text-indigo-300"
-                >
-                  MongoDB — Privacy Policy
-                  <svg
-                    className="h-4 w-4"
-                    fill="none"
-                    stroke="currentColor"
-                    viewBox="0 0 24 24"
+                {[
+                  {
+                    name: "Google AdMob — Privacy Policy",
+                    href: "https://policies.google.com/privacy",
+                  },
+                  {
+                    name: "Firebase Analytics — Privacy Policy",
+                    href: "https://firebase.google.com/support/privacy",
+                  },
+                  {
+                    name: "MongoDB — Privacy Policy",
+                    href: "https://www.mongodb.com/legal/privacy-policy",
+                  },
+                ].map((link) => (
+                  <a
+                    key={link.name}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center gap-1 text-indigo-400 transition duration-150 hover:text-indigo-300"
                   >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      strokeWidth={2}
-                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
-                    />
-                  </svg>
-                </a>
+                    {link.name}
+                    <svg
+                      className="h-4 w-4"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                        strokeWidth={2}
+                        d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                      />
+                    </svg>
+                  </a>
+                ))}
               </div>
             </div>
           </section>
@@ -112,6 +181,8 @@ export default function PrivacyPolicyPage() {
                   "Personalizing your test experience",
                   "Tracking your test progress and performance",
                   "Communicating important updates about the app",
+                  "Serving advertisements through Google AdMob",
+                  "Analyzing app usage patterns via Firebase Analytics to improve the user experience",
                   "Ensuring app reliability and performance",
                   "Identifying and fixing bugs",
                 ].map((item, i) => (
