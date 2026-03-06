@@ -39,7 +39,11 @@ export default function PrivacyPolicyPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1 text-amber-400">•</span>
-                    <span>Email Address</span>
+                    <span>WhatsApp Number</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="mt-1 text-amber-400">•</span>
+                    <span>Email Address (only for existing users)</span>
                   </li>
                 </ul>
               </div>
@@ -62,15 +66,7 @@ export default function PrivacyPolicyPage() {
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="mt-1 text-blue-400">•</span>
-                    <span>App usage events, session data, and screen views (via Firebase Analytics)</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-blue-400">•</span>
                     <span>Device specifications, OS version, and app version</span>
-                  </li>
-                  <li className="flex items-start gap-2">
-                    <span className="mt-1 text-blue-400">•</span>
-                    <span>Crash diagnostics and performance metrics</span>
                   </li>
                 </ul>
               </div>
@@ -97,21 +93,11 @@ export default function PrivacyPolicyPage() {
                 </p>
               </div>
               <div>
-                <h3 className="mb-2 text-lg font-medium text-white">Firebase Analytics</h3>
-                <p>
-                  We use Firebase Analytics to understand how users interact
-                  with the app. Firebase Analytics collects usage and event
-                  data, device information, app interactions, and session
-                  data. This helps us improve app performance and user
-                  experience. Data is processed by Google.
-                </p>
-              </div>
-              <div>
                 <h3 className="mb-2 text-lg font-medium text-white">MongoDB</h3>
                 <p>
                   MongoDB provides database storage functionality for the
-                  JeeMains Test Series app. Your personal information (name
-                  and email) is securely stored in our MongoDB database.
+                  JeeMains Test Series app. Your personal information (name,
+                  WhatsApp number, and email) is securely stored in our MongoDB database.
                 </p>
               </div>
               <p className="text-sm text-gray-400">
@@ -128,11 +114,7 @@ export default function PrivacyPolicyPage() {
                     name: "Google AdMob — Privacy Policy",
                     href: "https://policies.google.com/privacy",
                   },
-                  {
-                    name: "Firebase Analytics — Privacy Policy",
-                    href: "https://firebase.google.com/support/privacy",
-                  },
-                  {
+{
                     name: "MongoDB — Privacy Policy",
                     href: "https://www.mongodb.com/legal/privacy-policy",
                   },
@@ -182,7 +164,6 @@ export default function PrivacyPolicyPage() {
                   "Tracking your test progress and performance",
                   "Communicating important updates about the app",
                   "Serving advertisements through Google AdMob",
-                  "Analyzing app usage patterns via Firebase Analytics to improve the user experience",
                   "Ensuring app reliability and performance",
                   "Identifying and fixing bugs",
                 ].map((item, i) => (
