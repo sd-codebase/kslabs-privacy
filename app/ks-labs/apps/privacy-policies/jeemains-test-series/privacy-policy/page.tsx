@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "JeeMains Test Series by KS Labs - Privacy Policy",
+  title: "JEEMain-style Mock Test App by KS Labs - Privacy Policy",
 };
 
 export default function PrivacyPolicyPage() {
@@ -11,7 +11,7 @@ export default function PrivacyPolicyPage() {
         <header className="mb-10 border-b border-gray-800 pb-8">
           <h1 className="text-4xl font-bold text-white">
             Privacy Policy for{" "}
-            <span className="text-indigo-400">JeeMains Test Series by KS Labs</span>
+            <span className="text-indigo-400">JEEMain-style Mock Test App</span>
           </h1>
           <p className="mt-3 text-sm text-gray-400">
             Effective Date:{" "}
@@ -96,7 +96,7 @@ export default function PrivacyPolicyPage() {
                 <h3 className="mb-2 text-lg font-medium text-white">MongoDB</h3>
                 <p>
                   MongoDB provides database storage functionality for the
-                  JeeMains Test Series app. Your personal information (name,
+                  JEEMain-style Mock Test App. Your personal information (name,
                   WhatsApp number, and email) is securely stored in our MongoDB database.
                 </p>
               </div>
@@ -257,7 +257,7 @@ export default function PrivacyPolicyPage() {
         </div>
 
         <footer className="mt-12 border-t border-gray-800 pt-8 text-center text-sm text-gray-500">
-          <p>&copy; KS Labs — JeeMains Test Series</p>
+          <p>&copy; KS Labs — JEEMain-style Mock Test App</p>
           <p className="mt-1">Effective Date: January 9, 2026</p>
         </footer>
       </div>

@@ -1,19 +1,19 @@
 export default function Home() {
   const examApps = [
     {
-      name: "JEE Mains Test Series",
+      name: "JEEMain-style Mock Test App",
       description: "Complete preparation for JEE Mains with topic-wise tests, mock exams, and detailed analytics",
       icon: "🎯",
       platforms: ["Android", "iOS"],
     },
     {
-      name: "JEE Advanced Test Series",
+      name: "JEE Adv-style Mock Test App",
       description: "Advanced level practice for JEE Advanced with challenging problems and solutions",
       icon: "🚀",
       platforms: ["Android", "iOS"],
     },
     {
-      name: "NEET Test Series",
+      name: "NEET-style Mock Test App",
       description: "Comprehensive NEET preparation with biology, physics, and chemistry practice tests",
       icon: "🔬",
       platforms: ["Android", "iOS"],
