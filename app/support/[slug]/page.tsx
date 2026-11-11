@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 const apps: Record<string, string> = {
   neet: "NEET Test Series",
   jeemains: "JEE Mains Test Series",
+  jeeadvanced: "JEE Advanced Test Series",
   jeeadv: "JEE Adv. Test Series",
 };
 
