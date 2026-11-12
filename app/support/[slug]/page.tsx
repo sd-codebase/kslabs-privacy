@@ -5,6 +5,7 @@ const apps: Record<string, string> = {
   neet: "NEET Test Series",
   jeemains: "JEE Mains Test Series",
   jeeadv: "JEE Adv. Test Series",
+  mpscgs: "MPSC GS Test Series",
 };
 
 type Props = {
