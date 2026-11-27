@@ -70,28 +70,12 @@ export default function ExamAppPrivacyPolicy({ appName, exam }: { appName: strin
 
           <Section n={1} heading="Information We Collect">
             <div className="rounded-lg border-l-4 border-amber-500 bg-amber-500/10 p-4">
-              <p className="mb-2 text-amber-300">Information you give us:</p>
+              <p className="mb-2 text-amber-300">Information you give us when you sign in:</p>
               <List
                 color="amber"
                 items={[
-                  "Your name, and the exam and exam year you are preparing for",
-                  "Your WhatsApp number, used to send you a one-time login code (OTP)",
-                  "Your email address, only if you have an older account that was created with email",
-                  "Your test activity: tests started and submitted, answers, scores, time taken and saved progress",
-                  "Question reports you choose to send (the reason and an optional comment)",
-                ]}
-              />
-            </div>
-            <div className="rounded-lg border-l-4 border-blue-500 bg-blue-500/10 p-4">
-              <p className="mb-2 text-blue-300">Information the app sends to our servers automatically:</p>
-              <List
-                color="blue"
-                items={[
-                  "Usage information: screens you open and actions such as starting or submitting a test, with times",
-                  "Crash and error reports, and how long our servers take to respond",
-                  "Device and app details: device brand and model, iOS version, app version, network type, language and time zone",
-                  "A random ID created by the app when it is installed, used to group these logs from the same device",
-                  "Your IP address, which our servers receive with each request",
+                  "Your WhatsApp number, used to send you a one-time login code (OTP) and to identify your account",
+                  "Your name, shown on your profile",
                 ]}
               />
             </div>
@@ -102,25 +86,23 @@ export default function ExamAppPrivacyPolicy({ appName, exam }: { appName: strin
               <List
                 color="blue"
                 items={[
-                  "Your device's advertising identifier (IDFA), only if you allow tracking when the app asks, and other app or device identifiers",
-                  "Ads you have seen and your interactions with the app, such as app launches and taps",
-                  "Diagnostic information such as app performance and crash logs",
-                  "Your IP address, which Google may use to estimate your general (approximate) location",
+                  "Your device's advertising identifier (IDFA), only if you allow tracking when the app asks",
+                  "Ads you have seen and your interactions with ads",
+                  "Diagnostic information about app and ad performance",
                 ]}
               />
             </div>
-            <p>We do not collect your precise location, contacts, photos, files or payment details.</p>
+            <p>
+              We do not collect your email address, location, contacts, photos, files or payment
+              details, and we do not use Firebase Analytics or Firebase Crashlytics.
+            </p>
           </Section>
 
           <Section n={2} heading="How We Use Your Information">
             <List
               items={[
                 "To create and manage your account and log you in (the login code is sent through WhatsApp)",
-                "To save your tests and show your results, analysis and history",
-                "To review questions you report and fix mistakes",
-                "To keep the app working, measure performance, fix crashes and bugs, and prevent misuse",
-                "To understand how the app is used so we can improve tests and features",
-                "To show ads through Google AdMob, which keep the app free",
+                "To show ads through Google AdMob, which keep the app free, and to measure ad performance and prevent ad fraud",
               ]}
             />
             <p>We do not sell your personal information.</p>
@@ -131,8 +113,9 @@ export default function ExamAppPrivacyPolicy({ appName, exam }: { appName: strin
               items={[
                 <>
                   <strong className="text-white">Google (AdMob)</strong> — the ads SDK collects the
-                  information listed above and shares it with Google for advertising, ad measurement
-                  (analytics) and fraud prevention. The app requests non-personalised ads.{" "}
+                  advertising identifier, ad interactions and diagnostics listed above and shares them
+                  with Google for advertising, ad measurement and fraud prevention. The app requests
+                  non-personalised ads.{" "}
                   <Ext href="https://policies.google.com/privacy">Google Privacy Policy</Ext>
                 </>,
                 <>
@@ -141,8 +124,8 @@ export default function ExamAppPrivacyPolicy({ appName, exam }: { appName: strin
                   <Ext href="https://www.whatsapp.com/legal/privacy-policy">WhatsApp Privacy Policy</Ext>
                 </>,
                 <>
-                  <strong className="text-white">Hosting provider (Hostinger)</strong> — runs our
-                  servers and database, where your account, test activity and logs are stored.
+                  <strong className="text-white">Hosting provider (Hostinger)</strong> — stores your
+                  account on our behalf.
                 </>,
               ]}
             />

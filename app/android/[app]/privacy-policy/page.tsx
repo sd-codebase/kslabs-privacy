@@ -31,24 +31,11 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
       <Disclaimer exam={info.exam} />
 
       <Section n={1} heading="Information we collect">
-        <p>Information you give us when you sign in and use the app:</p>
+        <p>Information you give us when you sign in:</p>
         <Bullets
           items={[
-            "Your name, and the exam and exam year you are preparing for",
-            "Your WhatsApp number, used to send you a one-time login code (OTP)",
-            "Your email address, only if you have an older account that was created with email",
-            "Your test activity: tests started and submitted, answers, scores, time taken and saved progress",
-            "Question reports you choose to send (the reason and an optional comment)",
-          ]}
-        />
-        <p>Information the app sends to our servers automatically:</p>
-        <Bullets
-          items={[
-            "Usage information: screens you open and actions such as starting or submitting a test, with times",
-            "Crash and error reports, and how long our servers take to respond",
-            "Device and app details: device brand and model, Android version, app version, network type (Wi-Fi or mobile), language and time zone",
-            "A random ID created by the app when it is installed, used to group these logs from the same device",
-            "Your IP address, which our servers receive with each request",
+            "Your WhatsApp number, used to send you a one-time login code (OTP) and to identify your account",
+            "Your name, shown on your profile",
           ]}
         />
         <p>
@@ -57,15 +44,15 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
         </p>
         <Bullets
           items={[
-            "Your device's advertising ID and app set ID",
-            "Ad impressions, clicks and other interactions with the app",
-            "Diagnostic information such as app performance and crash logs",
-            "Your IP address, which Google may use to estimate your general (approximate) location",
+            "Your device's advertising ID",
+            "Ad views, taps and other interactions with ads",
+            "Diagnostic information about app and ad performance",
           ]}
         />
         <p>
-          We do not collect your precise location, contacts, photos, files or
-          payment details.
+          We do not collect your email address, location, contacts, photos,
+          files or payment details, and we do not use Firebase Analytics or
+          Firebase Crashlytics.
         </p>
       </Section>
 
@@ -73,11 +60,7 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
         <Bullets
           items={[
             "To create your account and log you in (the login code is sent through WhatsApp)",
-            "To save your tests and show your results, analysis and history",
-            "To review questions you report and fix mistakes",
-            "To show ads, which keep the app free",
-            "To keep the app working, measure performance, fix crashes and bugs, and prevent misuse",
-            "To understand how the app is used so we can improve tests and features",
+            "To show ads through Google AdMob, which keep the app free, and to measure ad performance and prevent ad fraud",
           ]}
         />
         <p>We do not sell your personal information.</p>
@@ -88,9 +71,9 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
           items={[
             <>
               <strong>Google (AdMob)</strong> — the ads SDK collects the
-              information listed above and shares it with Google for
-              advertising, ad measurement (analytics) and fraud prevention. The
-              app requests non-personalised ads.{" "}
+              advertising ID, ad interactions and diagnostics listed above and
+              shares them with Google for advertising, ad measurement and fraud
+              prevention. The app requests non-personalised ads.{" "}
               <Ext href="https://policies.google.com/privacy">
                 Google Privacy Policy
               </Ext>
@@ -103,7 +86,7 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
                 WhatsApp Privacy Policy
               </Ext>
             </>,
-            "Our server hosting provider (Hostinger), which runs our servers and database on our behalf",
+            "Our server hosting provider (Hostinger), which stores your account on our behalf",
           ]}
         />
         <p>
