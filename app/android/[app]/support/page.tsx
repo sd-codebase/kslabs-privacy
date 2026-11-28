@@ -55,7 +55,7 @@ export default async function AndroidSupportPage({ params }: AppParams) {
     <LegalShell title="Support" appName={info.name} slug={slug}>
       <Section heading="Contact us">
         <p>
-          Questions, problems or feedback? Email <Mail />. We usually reply
+          Questions, problems or feedback? Email <Mail email={info.email} />. We usually reply
           within 2 working days.
         </p>
         <p>

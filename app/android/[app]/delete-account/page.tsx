@@ -68,7 +68,7 @@ export default async function AndroidDeleteAccountPage({ params }: AppParams) {
       <Section n={4} heading="Need Help?">
         <p>
           If you have any questions about account deletion, contact us at:{" "}
-          <Mail />
+          <Mail email={info.email} />
         </p>
       </Section>
     </LegalShell>
