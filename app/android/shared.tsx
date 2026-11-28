@@ -2,29 +2,51 @@ import React from "react";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
-// Android (Google Play) pages for the apps now published by TickRight.dev.
+// Android (Google Play) pages. JEE Main, NEET and JEE Advanced are published by
+// TickRight.dev; MPSC GS is still published by KS Labs Edu.
 // The iOS / App Store pages under /ks-labs and /support are separate and unchanged.
 export const ANDROID_OWNER = "TickRight.dev";
 export const ANDROID_SUPPORT_EMAIL = "shitaldound59@gmail.com";
+const KSLABS_OWNER = "KS Labs Edu.";
+const KSLABS_EMAIL = "krishna.dhas021815@gmail.com";
 export const ANDROID_EFFECTIVE_DATE = "November 26, 2026";
 
-export type AndroidApp = { name: string; exam: string; packageName: string };
+export type AndroidApp = {
+  name: string;
+  exam: string;
+  packageName: string;
+  owner: string;
+  email: string;
+};
 
 export const ANDROID_APPS: Record<string, AndroidApp> = {
   jeemain: {
     name: "JEEMain-style Mock Test App",
     exam: "JEE Main",
     packageName: "com.jsleet.jeemains",
+    owner: ANDROID_OWNER,
+    email: ANDROID_SUPPORT_EMAIL,
   },
   neet: {
     name: "NEET-style Mock Test App",
     exam: "NEET",
     packageName: "com.jsleet.neetapp",
+    owner: ANDROID_OWNER,
+    email: ANDROID_SUPPORT_EMAIL,
   },
   jeeadvanced: {
     name: "JEE Adv-style Mock Test Series",
     exam: "JEE Advanced",
     packageName: "com.jsleet.jeeadvanced",
+    owner: ANDROID_OWNER,
+    email: ANDROID_SUPPORT_EMAIL,
+  },
+  mpscgs: {
+    name: "MPSC GS Mock Test App",
+    exam: "MPSC GS",
+    packageName: "com.jsleet.mpscgs",
+    owner: KSLABS_OWNER,
+    email: KSLABS_EMAIL,
   },
 };
 
@@ -52,6 +74,7 @@ export function LegalShell({
   slug: string;
   children: React.ReactNode;
 }) {
+  const owner = ANDROID_APPS[slug]?.owner ?? ANDROID_OWNER;
   const links = [
     ["Privacy policy", "privacy-policy"],
     ["Terms", "terms"],
@@ -65,7 +88,7 @@ export function LegalShell({
           <h1 className="text-4xl font-bold text-white">{title}</h1>
           <p className="mt-2 text-lg text-indigo-400">{appName} for Android</p>
           <p className="mt-3 text-sm text-gray-400">
-            Published on Google Play by {ANDROID_OWNER} · Effective date:{" "}
+            Published on Google Play by {owner} · Effective date:{" "}
             <span className="font-semibold">{ANDROID_EFFECTIVE_DATE}</span>
           </p>
         </header>
@@ -85,7 +108,7 @@ export function LegalShell({
             ))}
           </nav>
           <p>
-            &copy; 2026 {ANDROID_OWNER} — {appName}
+            &copy; 2026 {owner} — {appName}
           </p>
         </footer>
       </div>

@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  ANDROID_OWNER,
   AppParams,
   Bullets,
   Disclaimer,
@@ -24,7 +23,7 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
   return (
     <LegalShell title="Privacy Policy" appName={info.name} slug={slug}>
       <p>
-        This policy explains how {ANDROID_OWNER} (&quot;we&quot;, &quot;us&quot;)
+        This policy explains how {info.owner} (&quot;we&quot;, &quot;us&quot;)
         handles your information when you use the Android app{" "}
         <strong>{info.name}</strong> ({info.packageName}) from Google Play.
       </p>
@@ -143,7 +142,7 @@ export default async function AndroidPrivacyPolicyPage({ params }: AppParams) {
 
       <Section n={9} heading="Contact us">
         <p>
-          Questions or requests about your privacy: <Mail />
+          Questions or requests about your privacy: <Mail email={info.email} />
         </p>
       </Section>
     </LegalShell>

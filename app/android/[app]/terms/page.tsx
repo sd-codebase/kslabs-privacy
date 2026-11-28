@@ -1,6 +1,5 @@
 import type { Metadata } from "next";
 import {
-  ANDROID_OWNER,
   AppParams,
   Bullets,
   Disclaimer,
@@ -24,7 +23,7 @@ export default async function AndroidTermsPage({ params }: AppParams) {
     <LegalShell title="Terms of Use" appName={info.name} slug={slug}>
       <p>
         These terms apply to the Android app <strong>{info.name}</strong>,
-        published on Google Play by {ANDROID_OWNER}. By using the app you agree
+        published on Google Play by {info.owner}. By using the app you agree
         to them.
       </p>
       <Disclaimer exam={info.exam} />
@@ -106,7 +105,7 @@ export default async function AndroidTermsPage({ params }: AppParams) {
 
       <Section n={9} heading="Contact">
         <p>
-          Questions about these terms: <Mail />
+          Questions about these terms: <Mail email={info.email} />
         </p>
       </Section>
     </LegalShell>
